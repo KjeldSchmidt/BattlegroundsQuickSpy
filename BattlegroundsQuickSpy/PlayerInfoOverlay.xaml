@@ -5,14 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BattlegroundsQuickSpy"
              mc:Ignorable="d" 
-             Height="69" Width="100">
+             Height="69" Width="150">
     <UserControl.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="#3F3424"/>
             <Setter Property="FontFamily" Value="/HearthstoneDeckTracker;component/Resources/#Chunkfive"/>
-            <Setter Property="FontSize" Value="30"/>
-            <Setter Property="Width" Value="60"/>
-            <Setter Property="Height" Value="35"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Width" Value="130"/>
+            <Setter Property="Height" Value="25"/>
             <Setter Property="TextAlignment" Value="Right" />
             <Setter Property="VerticalAlignment" Value="Center" />
         </Style>

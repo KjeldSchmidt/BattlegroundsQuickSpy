@@ -38,7 +38,7 @@ namespace BattlegroundsQuickSpy
                 var overlay = new PlayerInfoOverlay();
                 _overlays.Add(overlay);
                 Core.OverlayCanvas.Children.Add(_overlays.Last());
-                Canvas.SetTop(overlay, 300 + 70*i);
+                Canvas.SetTop(overlay, 180 + 93*i);
                 Canvas.SetLeft(overlay, 50);
             }
         }
@@ -55,7 +55,7 @@ namespace BattlegroundsQuickSpy
 
         public string ButtonText => "Settings";
         public string Author => "Kjeld Schmidt";
-        public Version Version => new Version("0.0.6");
+        public Version Version => new Version("0.0.8");
         public MenuItem MenuItem => null;
     }
 }

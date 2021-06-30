@@ -22,9 +22,9 @@ namespace BattlegroundsQuickSpy
             Visibility = Visibility.Visible;
         }
 
-        public void Update(int count)
+        public void Update(string text)
         {
-            CountLabel.Text = count.ToString();
+            CountLabel.Text = text;
         }
     }
 }
