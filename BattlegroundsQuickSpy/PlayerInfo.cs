@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using HackF5.UnitySpy.HearthstoneLib;
 using Hearthstone_Deck_Tracker.Hearthstone;
 
@@ -22,6 +23,10 @@ namespace BattlegroundsQuickSpy
             _game = Hearthstone_Deck_Tracker.Core.Game;
             _mindVision = new MindVision();
             _overlays[0].Update("-3" );
+            foreach (var overlay in _overlays)
+            {
+                overlay.Update("1");
+            }
         }
 
         internal void ShowOverlayIfNeeded()
@@ -53,13 +58,6 @@ namespace BattlegroundsQuickSpy
                 overlay.Show();
             }
         }
-        
-        public void InMenu()
-        {
-            HideOverlays();
-            
-        }
-
         public void GameEnd()
         {
             HideOverlays();
@@ -70,7 +68,6 @@ namespace BattlegroundsQuickSpy
         {
             if ((DateTime.Now - lastUpdate).TotalSeconds < 1)
             {
-                _overlays[0].Update("-1");
                 return;
             }
 
@@ -87,6 +84,7 @@ namespace BattlegroundsQuickSpy
                 
                 _overlays[position].Update( $"{tier}");
             }
+            lastUpdate = DateTime.Now;
         }
     }
 }

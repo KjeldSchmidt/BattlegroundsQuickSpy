@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Windows;
 using System.Windows.Controls;
 using Hearthstone_Deck_Tracker.API;
 using Hearthstone_Deck_Tracker.Plugins;
@@ -23,7 +21,6 @@ namespace BattlegroundsQuickSpy
 
             GameEvents.OnGameStart.Add(_quickSpy.GameStart);
             GameEvents.OnGameEnd.Add(_quickSpy.GameEnd);
-            GameEvents.OnInMenu.Add(_quickSpy.InMenu);
         }
         
         public void OnUnload() {}
@@ -55,7 +52,7 @@ namespace BattlegroundsQuickSpy
 
         public string ButtonText => "Settings";
         public string Author => "Kjeld Schmidt";
-        public Version Version => new Version("0.0.8");
+        public Version Version => new Version("0.0.9");
         public MenuItem MenuItem => null;
     }
 }
