@@ -52,7 +52,7 @@ namespace BattlegroundsQuickSpy
 
         public string ButtonText => "Settings";
         public string Author => "Kjeld Schmidt";
-        public Version Version => new Version("0.0.9");
+        public Version Version => new Version("0.0.10");
         public MenuItem MenuItem => null;
     }
 }

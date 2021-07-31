@@ -77,7 +77,17 @@ namespace BattlegroundsQuickSpy
                 return;
             }
 
-            foreach (var player in _mindVision.GetBattlegroundsInfo().Game.Players)
+            IReadOnlyList<IBattlegroundsPlayer> players;
+            try
+            {
+                players = _mindVision.GetBattlegroundsInfo().Game.Players;
+            }
+            catch (Exception e)
+            {
+                players = new List<IBattlegroundsPlayer>();
+            }
+            
+            foreach (var player in players)
             {
                 int position = player.LeaderboardPosition - 1;
                 int tier = player.TechLevel;
